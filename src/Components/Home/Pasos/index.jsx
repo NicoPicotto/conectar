@@ -13,17 +13,23 @@ const PasosSection = () => {
    ];
 
    return (
-      <Stack maxW='80rem' w='100%' gap='1.5rem' paddingBlock="5rem">
-         <Heading size='xl' lineHeight={1.1}>
-            <Highlight query='simples pasos' styles={{ color: "celeste" }}>
-               Te acompañamos en 4 simples pasos.
-            </Highlight>
-         </Heading>
-         <SimpleGrid columns={4} spacing='1rem'>
-            {pasosInfo.map((paso) => (
-               <PasosCard key={paso.index} icon={paso.icon} text={paso.text} />
-            ))}
-         </SimpleGrid>
+      <Stack align='center' paddingInline='2rem' bgColor="negroOscuro">
+         <Stack maxW='80rem' w='100%' gap='1.5rem' paddingBlock='5rem'>
+            <Heading size='xl' lineHeight={1.1}>
+               <Highlight query='simples pasos' styles={{ color: "celeste" }}>
+                  Te acompañamos en 4 simples pasos.
+               </Highlight>
+            </Heading>
+            <SimpleGrid columns={4} spacing='1rem'>
+               {pasosInfo.map((paso) => (
+                  <PasosCard
+                     key={paso.index}
+                     icon={paso.icon}
+                     text={paso.text}
+                  />
+               ))}
+            </SimpleGrid>
+         </Stack>
       </Stack>
    );
 };

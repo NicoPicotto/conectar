@@ -8,31 +8,18 @@ import SpacerBottom from "../../Components/Spacers/spacerBottom";
 const HomeView = () => {
    return (
       <>
+         <HeroSection />
+         <SpacerTop />
+
+         <PasosSection />
+
+         <SpacerBottom />
          <Stack
             align='center'
             paddingInline='2rem'
             position='relative'
             overflowX='hidden'
          >
-            <HeroSection />
-            <SpacerTop />
-         </Stack>
-         <Stack
-            align='center'
-            padding='2rem'
-            bgColor='negroOscuro'
-            overflowX='hidden'
-            position='relative'
-         >
-            <PasosSection />
-         </Stack>
-         <Stack
-            align='center'
-            paddingInline='2rem'
-            position='relative'
-            overflowX='hidden'
-         >
-            <SpacerBottom />
             <HeroSection />
          </Stack>
       </>
