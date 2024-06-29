@@ -2,10 +2,11 @@ import { extendTheme } from "@chakra-ui/react";
 
 const colors = {
    negro: "#2B2A2F",
+   negroOscuro: "#232226",
    blanco: "#FFFFFF",
    azul: "#3691C2",
    celeste: "#5FC9DF",
-   gris: "#D7D7D7",
+   gris: "#292929",
 };
 
 const fonts = {
@@ -13,10 +14,18 @@ const fonts = {
    body: `"Alexandria", sans-serif;`,
 };
 
+const Heading = {
+   baseStyle: {
+      fontWeight: "regular",
+   },
+};
+
 const Button = {
    baseStyle: {
       fontWeight: "regular",
-      rounded: 5,
+      rounded: "full",
+      fontFamily: `"Unbounded", sans-serif;`,
+      shadow: "md",
    },
    // Variaciones de estilos por prop `variant`
    variants: {
@@ -42,14 +51,17 @@ const Button = {
       ghost: {
          color: colors.azul,
          width: "fit-content",
+         shadow: "none",
          _hover: {
             bg: colors.azul,
             color: colors.blanco,
+            shadow: "md",
          },
       },
       link: {
          color: colors.blanco,
          width: "fit-content",
+         shadow: "none",
          _hover: {
             textDecoration: "underline",
             textUnderlineOffset: "2px",
@@ -69,6 +81,11 @@ const styles = {
    },
 };
 
-const theme = extendTheme({ colors, fonts, styles, components: { Button } });
+const theme = extendTheme({
+   colors,
+   fonts,
+   styles,
+   components: { Button, Heading },
+});
 
 export default theme;

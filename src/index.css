@@ -1,0 +1,25 @@
+* {
+   box-sizing: border-box;
+   scrollbar-color: #3691c2 #232226;
+   scrollbar-width: auto;
+   scroll-behavior: smooth;
+}
+
+/*LENIS*/
+
+html.lenis {
+   height: auto;
+}
+.lenis.lenis-smooth {
+   scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+   overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+   overflow: hidden;
+}
+
+body.no-scroll {
+   overflow: hidden;
+}

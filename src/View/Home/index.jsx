@@ -1,17 +1,41 @@
-import { Stack, Heading, Text, Button } from "@chakra-ui/react";
+import { useEffect } from "react";
+import { Stack, Heading, Text, Button, Image } from "@chakra-ui/react";
+import HeroSection from "../../Components/Home/Hero";
+import SpacerTop from "../../Components/Spacers/spacerTop";
+import PasosSection from "../../Components/Home/Pasos";
+import SpacerBottom from "../../Components/Spacers/spacerBottom";
 
 const HomeView = () => {
    return (
-      <Stack>
-         <Heading>Hello world!</Heading>
-         <Text>This is a paragraph.</Text>
-         <Text color='azul'>This is a paragraph.</Text>
-         <Text color='celeste'>This is a paragraph.</Text>
-         <Stack direction='row'>
-            <Button>This is a button</Button>
-            <Button variant='outline'>This is another button</Button>
+      <>
+         <Stack
+            align='center'
+            paddingInline='2rem'
+            position='relative'
+            overflowX='hidden'
+         >
+            <HeroSection />
+            <SpacerTop />
          </Stack>
-      </Stack>
+         <Stack
+            align='center'
+            padding='2rem'
+            bgColor='negroOscuro'
+            overflowX='hidden'
+            position='relative'
+         >
+            <PasosSection />
+         </Stack>
+         <Stack
+            align='center'
+            paddingInline='2rem'
+            position='relative'
+            overflowX='hidden'
+         >
+            <SpacerBottom />
+            <HeroSection />
+         </Stack>
+      </>
    );
 };
 
