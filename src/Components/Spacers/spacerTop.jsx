@@ -1,10 +1,13 @@
 import { Image, Stack } from "@chakra-ui/react";
 import spacerImg from "/assets/images/curve-top.svg";
 
-const SpacerTop = () => {
+const SpacerTop = ({ espejado }) => {
    return (
-      <Stack w='100dvw'>
-         <Image src={spacerImg} />
+      <Stack maxW='100dvw'>
+         <Image
+            src={spacerImg}
+            transform={espejado ? "scaleX(-1)" : "scaleX(1)"}
+         />
       </Stack>
    );
 };

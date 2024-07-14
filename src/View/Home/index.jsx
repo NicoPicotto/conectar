@@ -1,27 +1,24 @@
-import { useEffect } from "react";
-import { Stack, Heading, Text, Button, Image } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
 import HeroSection from "../../Components/Home/Hero";
 import SpacerTop from "../../Components/Spacers/spacerTop";
 import PasosSection from "../../Components/Home/Pasos";
 import SpacerBottom from "../../Components/Spacers/spacerBottom";
+import Normas from "../../Components/Home/Normas";
+import Faq from "../../Components/Home/FAQ";
+import Contacto from "../../Components/Home/Contacto";
 
 const HomeView = () => {
    return (
       <>
          <HeroSection />
          <SpacerTop />
-
          <PasosSection />
-
          <SpacerBottom />
-         <Stack
-            align='center'
-            paddingInline='2rem'
-            position='relative'
-            overflowX='hidden'
-         >
-            <HeroSection />
-         </Stack>
+         <Normas />
+         <SpacerTop />
+         <Faq />
+         <SpacerBottom />
+         <Contacto />
       </>
    );
 };

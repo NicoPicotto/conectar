@@ -1,4 +1,5 @@
-import { Stack, Text, Heading, Image } from "@chakra-ui/react";
+/* eslint-disable react/prop-types */
+import { Stack, Heading, Image } from "@chakra-ui/react";
 
 const PasosCard = ({ icon, text }) => {
    return (
@@ -10,7 +11,9 @@ const PasosCard = ({ icon, text }) => {
          w='100%'
          h='12rem'
          p='1rem'
+         transition='0.2s ease'
          justify='space-between'
+         _hover={{ filter: "brightness(1.2)" }}
       >
          <Stack align='start'>
             <Image src={icon} h='2rem' />
