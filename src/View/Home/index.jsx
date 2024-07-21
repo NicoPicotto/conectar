@@ -1,4 +1,3 @@
-import { Stack } from "@chakra-ui/react";
 import HeroSection from "../../Components/Home/Hero";
 import SpacerTop from "../../Components/Spacers/spacerTop";
 import PasosSection from "../../Components/Home/Pasos";

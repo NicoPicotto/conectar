@@ -3,7 +3,7 @@ import heroImg from "/assets/images/Home/hero.png";
 
 const HeroSection = () => {
    return (
-      <Stack align="center" paddingInline="2rem">
+      <Stack align="center" paddingInline="2rem" id="hero">
          <Stack maxW='80rem' w='100%' gap='1.5rem' marginBottom='5rem'>
             <Stack borderRadius='3rem' overflow='hidden'>
                <Image src={heroImg} />

@@ -12,9 +12,14 @@ import {
    Text,
 } from "@chakra-ui/react";
 
-const Contacto = () => {
+const Contacto = ({service}) => {
    return (
-      <Stack align='center' paddingInline='2rem' paddingBlock='2rem'>
+      <Stack
+         align='center'
+         paddingInline='2rem'
+         paddingBlock='2rem'
+         id='contact'
+      >
          <Stack maxW='80rem' w='100%' gap='1.5rem' paddingBlock='5rem'>
             <SimpleGrid columns={2} spacing='1rem'>
                <Heading size='xl' lineHeight={1.1} mb='1rem' maxW='15ch'>

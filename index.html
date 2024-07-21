@@ -20,7 +20,7 @@
       <div id="root"></div>
       <script type="module" src="/src/main.jsx"></script>
       <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.23/bundled/lenis.min.js"></script>
-      <script>
+      <!-- <script>
          // LENIS SMOOTH SCROLL
          let lenis;
 
@@ -37,20 +37,45 @@
          }
          requestAnimationFrame(raf);
 
-         $("[data-lenis-start]").on("click", function () {
-            lenis.start();
+         //Esto lo agregue yo
+         document.querySelectorAll("[href^='#']").forEach((anchor) => {
+            const target = document.querySelector(anchor.getAttribute("href"));
+
+            anchor.addEventListener("click", (e) => {
+               e.preventDefault();
+               console.log(target);
+               lenis.scrollTo(target, { offset: -80 });
+            });
          });
-         $("[data-lenis-stop]").on("click", function () {
-            lenis.stop();
-         });
-         $("[data-lenis-toggle]").on("click", function () {
-            $(this).toggleClass("stop-scroll");
-            if ($(this).hasClass("stop-scroll")) {
-               lenis.stop();
-            } else {
-               lenis.start();
-            }
-         });
-      </script>
+
+         document
+            .querySelectorAll("[data-lenis-start]")
+            .forEach(function (element) {
+               element.addEventListener("click", function () {
+                  lenis.start();
+               });
+            });
+
+         document
+            .querySelectorAll("[data-lenis-stop]")
+            .forEach(function (element) {
+               element.addEventListener("click", function () {
+                  lenis.stop();
+               });
+            });
+
+         document
+            .querySelectorAll("[data-lenis-toggle]")
+            .forEach(function (element) {
+               element.addEventListener("click", function () {
+                  this.classList.toggle("stop-scroll");
+                  if (this.classList.contains("stop-scroll")) {
+                     lenis.stop();
+                  } else {
+                     lenis.start();
+                  }
+               });
+            });
+      </script> -->
    </body>
 </html>

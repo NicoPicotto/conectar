@@ -21,13 +21,24 @@ const Navbar = () => {
             backdropBlur='6px'
          >
             <Stack>
-               <Image w='5rem' src={logo} />
+               <Link as={ReachLink} to='/'>
+                  <Image w='5rem' src={logo} />
+               </Link>
             </Stack>
-            <Stack direction='row' gap='2rem'>
-               <Button variant='link'>Equipo</Button>
-               <Button variant='link'>Servicios</Button>
-               <Button variant='link'>Aliados Estratégicos</Button>
-               <Button variant='link'>Preguntas Frecuentes</Button>
+            <Stack direction='row' gap='2rem' align='center'>
+               <Link as={ReachLink} to='/equipo'>
+                  <Button variant='link'>Equipo</Button>
+               </Link>
+               <Link as={ReachLink} to='/servicios'>
+                  <Button variant='link'>Servicios</Button>
+               </Link>
+               <Link as={ReachLink} to='/aliados'>
+                  <Button variant='link'>Aliados Estratégicos</Button>
+               </Link>
+               <Link as='a' href='#faq'>
+                  <Button variant='link'>Preguntas Frecuentes</Button>
+               </Link>
+
                <Button>Contactate</Button>
             </Stack>
          </Stack>

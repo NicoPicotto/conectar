@@ -13,9 +13,9 @@ const PasosSection = () => {
    ];
 
    return (
-      <Stack align='center' paddingInline='2rem' bgColor="negroOscuro">
+      <Stack align='center' paddingInline='2rem' bgColor='negroOscuro'>
          <Stack maxW='80rem' w='100%' gap='1.5rem' paddingBlock='5rem'>
-            <Heading size='xl' lineHeight={1.1} mb="1rem">
+            <Heading size='xl' lineHeight={1.1} mb='1rem'>
                <Highlight query='simples pasos' styles={{ color: "celeste" }}>
                   Te acompañamos en 4 simples pasos.
                </Highlight>
@@ -23,7 +23,7 @@ const PasosSection = () => {
             <SimpleGrid columns={4} spacing='1rem'>
                {pasosInfo.map((paso) => (
                   <PasosCard
-                     key={paso.index}
+                     key={paso.text}
                      icon={paso.icon}
                      text={paso.text}
                   />

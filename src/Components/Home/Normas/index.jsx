@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import { Stack, Heading, Highlight, Image, Text, Box } from "@chakra-ui/react";
 import isoImg from "/assets/images/Home/iso.svg";
 import Marquee from "react-marquee-slider";
 
-const Normas = () => {
+const Normas = ({ bgColor }) => {
    const normasInfo = [
       { number: "9001", title: "Calidad" },
       { number: "17025", title: "Laboratorios de Ensayo y Calibración" },
@@ -13,7 +14,12 @@ const Normas = () => {
    ];
 
    return (
-      <Stack align='center' paddingInline='2rem' paddingBlock="2rem">
+      <Stack
+         align='center'
+         paddingInline='2rem'
+         paddingBlock='2rem'
+         bgColor={bgColor ? bgColor : "inherit"}
+      >
          <Stack maxW='80rem' w='100%' gap='1.5rem' paddingBlock='5rem'>
             <Heading size='xl' lineHeight={1.1} mb='1rem'>
                <Highlight query='normas' styles={{ color: "celeste" }}>
@@ -27,7 +33,9 @@ const Normas = () => {
                   bottom={0}
                   left={0}
                   width='5rem'
-                  bgGradient='linear(to-r, #2B2A2F, transparent)'
+                  bgGradient={`linear(to-r, ${
+                     bgColor ? bgColor : "#2B2A2F"
+                  }, transparent)`}
                   zIndex={1}
                />
                <Box
@@ -36,7 +44,9 @@ const Normas = () => {
                   bottom={0}
                   right={0}
                   width='5rem'
-                  bgGradient='linear(to-l, #2B2A2F, transparent)'
+                  bgGradient={`linear(to-l, ${
+                     bgColor ? bgColor : "#2B2A2F"
+                  }, transparent)`}
                   zIndex={1}
                />
                <Marquee velocity={20}>
