@@ -1,6 +1,15 @@
-import { Stack, Divider, Text, Button, Image, Icon } from "@chakra-ui/react";
+import {
+   Stack,
+   Divider,
+   Text,
+   Button,
+   Image,
+   Icon,
+   Link,
+} from "@chakra-ui/react";
 import SpacerTop from "../Spacers/spacerTop";
 import logo from "/assets/images/logo-full.svg";
+import { Link as ReachLink } from "react-router-dom";
 import { MdLocationOn, MdEmail } from "react-icons/md";
 import { IoLogoWhatsapp } from "react-icons/io";
 
@@ -29,21 +38,26 @@ const Footer = () => {
                      </Stack>
                   </Stack>
                   <Stack gap='1rem' justify='flex-end' align='flex-end'>
-                     <Button variant='link' size='sm' fontFamily='body'>
-                        Equipo
-                     </Button>
-                     <Button variant='link' size='sm' fontFamily='body'>
-                        Servicios
-                     </Button>
-                     <Button variant='link' size='sm' fontFamily='body'>
-                        Aliados Estratégicos
-                     </Button>
-                     <Button variant='link' size='sm' fontFamily='body'>
-                        Preguntas Frecuentes
-                     </Button>
-                     <Button variant='link' size='sm' fontFamily='body'>
-                        Contactarse
-                     </Button>
+                     <Link as={ReachLink} to='/nosotros'>
+                        <Button variant='link' size='sm' fontFamily='body'>
+                           Equipo
+                        </Button>
+                     </Link>
+                     <Link as={ReachLink} to='/servicios'>
+                        <Button variant='link' size='sm' fontFamily='body'>
+                           Servicios
+                        </Button>
+                     </Link>
+                     <Link as={ReachLink} to='/faq'>
+                        <Button variant='link' size='sm' fontFamily='body'>
+                           Preguntas Frecuentes
+                        </Button>
+                     </Link>
+                     <Link as='a' href='#contact'>
+                        <Button variant='link' size='sm' fontFamily='body'>
+                           Contactarse
+                        </Button>
+                     </Link>
                   </Stack>
                </Stack>
                <Divider />

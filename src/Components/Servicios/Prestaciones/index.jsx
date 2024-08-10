@@ -4,7 +4,7 @@ import listaPrestaciones from "./listaPrestaciones";
 const Prestaciones = () => {
    return (
       <Stack align='center' paddingInline='2rem'>
-         <Stack maxW='80rem' w='100%' gap='1.5rem' paddingBlock='5rem'>
+         <Stack maxW='80rem' w='100%' gap='1.5rem' paddingBlock='3rem'>
             <Heading size='xl' lineHeight={1.1} mb='1rem'>
                <Highlight
                   query='100% personalizado'
@@ -13,24 +13,20 @@ const Prestaciones = () => {
                   Acompañamiento 100% personalizado.
                </Highlight>
             </Heading>
-            <SimpleGrid columns={3} spacing='1rem'>
+            <SimpleGrid columns={4} spacing='1rem'>
                {listaPrestaciones.map((prestacion) => (
                   <Stack
                      bgColor='negroOscuro'
                      key={prestacion.title}
                      borderRadius={10}
                      p='2rem'
-                     minH='10rem'
+                     minH='13rem'
                      align='center'
                      position='relative'
                      overflow='hidden'
                      justify='center'
                      outline='1px solid #3691C2'
                      _hover={{
-                        "& > .service-title": {
-                           opacity: 0,
-                           pointerEvents: "none",
-                        },
                         "& > .contact-overlay": {
                            opacity: 1,
                         },
@@ -49,17 +45,18 @@ const Prestaciones = () => {
                         bgColor='azul'
                         position='absolute'
                         w='100%'
-                        h='100%'
+                        h='fit-content'
                         zIndex={1}
                         justify='center'
                         align='center'
-                        top={0}
+                        bottom={0}
                         left={0}
                         className='contact-overlay'
                         opacity={0}
+                        paddingBlock='0.7rem'
                      >
                         <Link as='a' href='#contact'>
-                           <Heading size='sm'>
+                           <Heading size='xs'>
                               Contactarme por este servicio
                            </Heading>
                         </Link>

@@ -1,16 +1,21 @@
 /* eslint-disable react/prop-types */
-import { Stack, Heading, Highlight, Image, Text, Box } from "@chakra-ui/react";
-import isoImg from "/assets/images/Home/iso.svg";
+import { Stack, Heading, Highlight, Text, Box } from "@chakra-ui/react";
 import Marquee from "react-marquee-slider";
 
 const Normas = ({ bgColor }) => {
    const normasInfo = [
-      { number: "9001", title: "Calidad" },
-      { number: "17025", title: "Laboratorios de Ensayo y Calibración" },
-      { number: "22001", title: "Inocuidad Alimentaria" },
-      { number: "27001", title: "Seguridad de la Información" },
-      { number: "14001", title: "Medio Ambiente" },
-      { number: "26000", title: "Responsabilidad Social" },
+      { number: "ISO 9001", title: "Calidad" },
+      { number: "ISO 17025", title: "Laboratorios de Ensayo y Calibración" },
+      { number: "ISO 22001", title: "Inocuidad Alimentaria" },
+      { number: "ISO 27001", title: "Seguridad de la Información" },
+      { number: "ISO 14001", title: "Medio Ambiente" },
+      { number: "ISO 26000", title: "Responsabilidad Social" },
+      { number: "BPM", title: "Buenas Prácticas de Manufactura" },
+      {
+         number: "HACCP",
+         title: "Análisis de Peligros y Puntos Críticos de Control",
+      },
+      { number: "EMPRESA B", title: "Triple Impacto" },
    ];
 
    return (
@@ -53,31 +58,33 @@ const Normas = ({ bgColor }) => {
                   {normasInfo.map((norma) => (
                      <Stack
                         key={norma.number}
-                        direction='row'
-                        borderWidth={1}
-                        borderColor='blanco'
+                        borderWidth={2}
+                        borderColor='azul'
                         borderRadius={20}
                         shadow='sm'
-                        p='1rem'
-                        h='auto'
-                        minW='20rem'
-                        justify='space-between'
+                        px='1rem'
+                        pb='1rem'
+                        w='18rem'
+                        minH='7rem'
+                        height='100%'
                         align='center'
                         mx='1rem'
                      >
-                        <Image src={isoImg} h='5rem' />
                         <Stack
-                           align='flex-end'
-                           justify='space-between'
-                           h='100%'
+                           bgColor='azul'
+                           pt='0.5rem'
+                           px='1rem'
+                           pb='0.5rem'
+                           mb='0.5rem'
+                           borderBottomRadius='1rem'
                         >
-                           <Heading textAlign='right' color='celeste'>
+                           <Heading size='md' color='blanco' fontWeight='bold'>
                               {norma.number}
                            </Heading>
-                           <Text maxW='15ch' lineHeight={1.1} textAlign='right'>
-                              {norma.title}
-                           </Text>
                         </Stack>
+                        <Text maxW='20ch' lineHeight={1.1} textAlign='center'>
+                           {norma.title}
+                        </Text>
                      </Stack>
                   ))}
                </Marquee>

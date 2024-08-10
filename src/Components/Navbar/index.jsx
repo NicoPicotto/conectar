@@ -1,5 +1,4 @@
-import React from "react";
-import { Stack, Text, Button, Link, Image } from "@chakra-ui/react";
+import { Stack, Button, Link, Image } from "@chakra-ui/react";
 import { Link as ReachLink } from "react-router-dom";
 import logo from "/assets/images/logosvg.svg";
 
@@ -25,21 +24,19 @@ const Navbar = () => {
                   <Image w='5rem' src={logo} />
                </Link>
             </Stack>
-            <Stack direction='row' gap='2rem' align='center'>
-               <Link as={ReachLink} to='/equipo'>
-                  <Button variant='link'>Equipo</Button>
+            <Stack direction='row' gap='3rem' align='center'>
+               <Link as={ReachLink} to='/nosotros'>
+                  <Button variant='link'>Nosotros</Button>
                </Link>
                <Link as={ReachLink} to='/servicios'>
                   <Button variant='link'>Servicios</Button>
                </Link>
-               <Link as={ReachLink} to='/aliados'>
-                  <Button variant='link'>Aliados Estratégicos</Button>
-               </Link>
-               <Link as='a' href='#faq'>
+               <Link as={ReachLink} to='/faq'>
                   <Button variant='link'>Preguntas Frecuentes</Button>
                </Link>
-
-               <Button>Contactate</Button>
+               <Link as='a' href='#contact'>
+                  <Button>Contactate</Button>
+               </Link>
             </Stack>
          </Stack>
       </Stack>

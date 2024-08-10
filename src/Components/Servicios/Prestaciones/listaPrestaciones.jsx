@@ -1,21 +1,27 @@
 const listaPrestaciones = [
    {
-      title: "Consultorías para implementación de normas nacionales e Internacionales.",
+      title: "Consultoría para la Implementación de Normas y/o Sistemas.",
    },
    {
-      title: "Capacitaciones.",
+      title: "Gestión de Procesos",
    },
    {
-      title: "Asistencia en la ejecución de proyectos.",
+      title: "Asesoría en la Ejecución de Proyectos.",
    },
    {
-      title: "Análisis y gestión de riesgos.",
+      title: "Análisis y Gestión de Riesgos.",
    },
    {
       title: "Auditorías Internas.",
    },
    {
       title: "Auditorías a Proveedores.",
+   },
+   {
+      title: "Capacitación.",
+   },
+   {
+      title: "Mentoring y Coaching Empresarial.",
    },
 ];
 

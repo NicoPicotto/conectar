@@ -3,7 +3,7 @@ import { Stack, Heading, Text, SimpleGrid, Highlight } from "@chakra-ui/react";
 const MisionVisionValores = () => {
    return (
       <Stack align='center' paddingInline='2rem'>
-         <Stack maxW='80rem' w='100%' gap='1.5rem' paddingBlock='5rem'>
+         <Stack maxW='80rem' w='100%' gap='1.5rem' paddingBlock='3rem'>
             <Heading size='xl' lineHeight={1.1} mb='1rem'>
                <Highlight
                   query='amet consectetur'
@@ -18,26 +18,24 @@ const MisionVisionValores = () => {
                   borderRadius={10}
                   p='2rem'
                   align='center'
-                  justify='center'
                   position='relative'
                   minH='18rem'
+                  gap='1rem'
+                  transition='outline 0.2s ease'
                   _hover={{
-                     "& > h2": { opacity: 0, pointerEvents: "none" },
-                     "& > p": { opacity: 1 },
-                     outline: "1px solid #3691C2",
+                     shadow: "md",
+                     outline: "2px solid #5FC9DF",
                   }}
                >
-                  <Heading position='absolute' transition='opacity 0.2s'>
+                  <Heading color='celeste' transition='opacity 0.2s'>
                      Misión
                   </Heading>
-                  <Text
-                     textAlign='center'
-                     opacity={0}
-                     transition='opacity 0.2s ease'
-                  >
+                  <Text textAlign='center'>
                      Ofrecer servicios de consultoría a pequeñas y medianas
                      empresas, colaborando en su crecimiento y el logro de sus
-                     objetivos.
+                     objetivos, contribuyendo positivamente en el bienestar de
+                     la comunidad y minimizando nuestro impacto en el medio
+                     ambiente.
                   </Text>
                </Stack>
 
@@ -46,28 +44,22 @@ const MisionVisionValores = () => {
                   borderRadius={10}
                   p='2rem'
                   align='center'
-                  justify='center'
                   position='relative'
                   minH='18rem'
+                  gap='1rem'
+                  transition='outline 0.2s ease'
                   _hover={{
-                     "& > h2": { opacity: 0, pointerEvents: "none" },
-                     "& > p": { opacity: 1 },
-                     outline: "1px solid #3691C2",
+                     shadow: "md",
+                     outline: "2px solid #5FC9DF",
                   }}
                >
-                  <Heading position='absolute' transition='opacity 0.2s'>
-                     Visión
-                  </Heading>
-                  <Text
-                     textAlign='center'
-                     opacity={0}
-                     transition='opacity 0.2s ease'
-                  >
+                  <Heading color='celeste'>Visión</Heading>
+                  <Text textAlign='center'>
                      Ser una consultora reconocida en nuestro ámbito de
                      actuación, mientras construimos relaciones sólidas y
                      estables con nuestros clientes, posibilitando a nuestros
                      profesionales desarrollarse en un ambiente de trabajo
-                     colaborativo, ética y honestidad.
+                     colaborativo, ético y con honestidad.
                   </Text>
                </Stack>
                <Stack
@@ -75,53 +67,22 @@ const MisionVisionValores = () => {
                   borderRadius={10}
                   p='2rem'
                   align='center'
-                  justify='center'
                   position='relative'
                   minH='18rem'
+                  transition='outline 0.2s ease'
                   _hover={{
-                     "& > h2": { opacity: 0, pointerEvents: "none" },
-                     "& > p": { opacity: 1 },
-                     outline: "1px solid #3691C2",
+                     shadow: "md",
+                     outline: "2px solid #5FC9DF",
                   }}
                >
-                  <Heading position='absolute' transition='opacity 0.2s'>
+                  <Heading mb='1rem' color='celeste'>
                      Valores
                   </Heading>
-                  <Text
-                     textAlign='center'
-                     opacity={0}
-                     transition='opacity 0.2s ease'
-                  >
-                     Profesionalidad
-                  </Text>
-                  <Text
-                     textAlign='center'
-                     opacity={0}
-                     transition='opacity 0.2s ease'
-                  >
-                     Honestidad
-                  </Text>
-                  <Text
-                     textAlign='center'
-                     opacity={0}
-                     transition='opacity 0.2s ease'
-                  >
-                     Integridad
-                  </Text>
-                  <Text
-                     textAlign='center'
-                     opacity={0}
-                     transition='opacity 0.2s ease'
-                  >
-                     Innovación
-                  </Text>
-                  <Text
-                     textAlign='center'
-                     opacity={0}
-                     transition='opacity 0.2s ease'
-                  >
-                     Compromiso
-                  </Text>
+                  <Text textAlign='center'>Profesionalidad</Text>
+                  <Text textAlign='center'>Honestidad</Text>
+                  <Text textAlign='center'>Integridad</Text>
+                  <Text textAlign='center'>Innovación</Text>
+                  <Text textAlign='center'>Compromiso</Text>
                </Stack>
             </SimpleGrid>
          </Stack>

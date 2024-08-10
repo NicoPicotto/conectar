@@ -3,6 +3,7 @@ import PasosCard from "./PasosCard";
 
 const PasosSection = () => {
    const pasosInfo = [
+      { text: "Diagnóstico", icon: "/assets/images/Home/diagnostico.svg" },
       { text: "Preparacion", icon: "/assets/images/Home/preparacion.svg" },
       {
          text: "Implementación",
@@ -17,10 +18,10 @@ const PasosSection = () => {
          <Stack maxW='80rem' w='100%' gap='1.5rem' paddingBlock='5rem'>
             <Heading size='xl' lineHeight={1.1} mb='1rem'>
                <Highlight query='simples pasos' styles={{ color: "celeste" }}>
-                  Te acompañamos en 4 simples pasos.
+                  Te acompañamos en 5 simples pasos.
                </Highlight>
             </Heading>
-            <SimpleGrid columns={4} spacing='1rem'>
+            <SimpleGrid columns={5} spacing='1rem'>
                {pasosInfo.map((paso) => (
                   <PasosCard
                      key={paso.text}

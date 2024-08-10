@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
    Stack,
    Heading,
@@ -12,7 +13,7 @@ import {
    Text,
 } from "@chakra-ui/react";
 
-const Faq = () => {
+const Faq = ({ bgColor }) => {
    const faqInfo = [
       {
          question: "¿En qué áreas de negocio puedo solicitar asesoramiento?",
@@ -61,7 +62,12 @@ const Faq = () => {
    ];
 
    return (
-      <Stack align='center' paddingInline='2rem' bgColor='negroOscuro' id='faq'>
+      <Stack
+         align='center'
+         paddingInline='2rem'
+         bgColor={bgColor ? bgColor : "negroOscuro"}
+         id='faq'
+      >
          <Stack maxW='80rem' w='100%' gap='1.5rem' paddingBlock='5rem'>
             <SimpleGrid columns={2} spacing='1rem'>
                <Heading size='xl' lineHeight={1.3} mb='1rem' maxW='15ch'>

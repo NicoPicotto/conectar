@@ -66,7 +66,7 @@ function App() {
                <Routes>
                   <Route path='/' element={<HomeView />} />
                   <Route path='/servicios' element={<ServiciosView />} />
-                  <Route path='/equipo' element={<EquipoView />} />
+                  <Route path='/nosotros' element={<EquipoView />} />
                </Routes>
             </SmoothScrollWrapper>
             <Footer />
