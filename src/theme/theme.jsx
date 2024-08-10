@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { extendTheme } from "@chakra-ui/react";
 
 const colors = {

@@ -10,7 +10,7 @@ const PasosSection = () => {
          icon: "/assets/images/Home/implementacion.svg",
       },
       { text: "Verificación", icon: "/assets/images/Home/verificacion.svg" },
-      { text: "Mejora Contínua", icon: "/assets/images/Home/mejora.svg" },
+      { text: "Mejora", icon: "/assets/images/Home/mejora.svg" },
    ];
 
    return (

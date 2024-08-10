@@ -14,6 +14,7 @@ import ServiciosView from "./View/Servicios";
 import EquipoView from "./View/Equipo";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 import ScrollToTopButton from "./Components/ScrollToTopButton";
+import FAQView from "./View/FAQ";
 import Lenis from "@studio-freight/lenis";
 
 function SmoothScrollWrapper({ children }) {
@@ -67,6 +68,7 @@ function App() {
                   <Route path='/' element={<HomeView />} />
                   <Route path='/servicios' element={<ServiciosView />} />
                   <Route path='/nosotros' element={<EquipoView />} />
+                  <Route path='/faq' element={<FAQView />} />
                </Routes>
             </SmoothScrollWrapper>
             <Footer />
