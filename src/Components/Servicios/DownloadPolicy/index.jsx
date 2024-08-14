@@ -18,7 +18,7 @@ const DownloadPolicy = () => {
             <Heading
                as='a'
                download
-               href='/assets/politica/Conectar.pdf'
+               href='/assets/politica/PGS-01-00_PolíticaDeGestiónSostenible.pdf'
                size='lg'
                lineHeight={1.1}
                textDecorationColor='celeste'

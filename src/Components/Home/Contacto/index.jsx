@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+import { useState } from "react";
 import {
    Stack,
    Heading,
@@ -13,6 +15,18 @@ import {
 } from "@chakra-ui/react";
 
 const Contacto = ({ bgColor }) => {
+   const [isSubmitted, setIsSubmitted] = useState(false);
+
+   const handleSubmit = (event) => {
+      event.preventDefault();
+      // Aquí puedes agregar lógica adicional si es necesario.
+      // Luego de enviar el formulario a través del atributo action, establecemos el estado:
+      setIsSubmitted(true);
+
+      // Simular el envío del formulario manualmente si es necesario
+      event.target.submit();
+   };
+
    return (
       <Stack
          align='center'
@@ -25,10 +39,16 @@ const Contacto = ({ bgColor }) => {
             <SimpleGrid columns={2} spacing='1rem'>
                <Heading size='xl' lineHeight={1.1} mb='1rem' maxW='15ch'>
                   <Highlight query='normas' styles={{ color: "celeste" }}>
-                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                     Contactate y comenzá a impulsar tu crecimiento
                   </Highlight>
                </Heading>
-               <Stack as='form' gap='1rem'>
+               <Stack
+                  as='form'
+                  gap='1rem'
+                  action='https://formsubmit.co/d9266b665bb4566e1ae1f67371c3079e'
+                  method='POST'
+                  onSubmit={handleSubmit}
+               >
                   <Stack direction='row' gap='1rem'>
                      <FormControl>
                         <FormLabel fontSize='sm' paddingLeft='0.5rem'>
@@ -97,9 +117,11 @@ const Contacto = ({ bgColor }) => {
                            borderColor='azul'
                            _hover={{ borderColor: "celeste" }}
                         >
-                           <option value='option1'>Option 1</option>
-                           <option value='option2'>Option 2</option>
-                           <option value='option3'>Option 3</option>
+                           <option value='option1'>Servicios</option>
+                           <option value='option1'>Industria</option>
+                           <option value='option1'>Agroindustria</option>
+                           <option value='option2'>Tecnología</option>
+                           <option value='option3'>Otro</option>
                         </Select>
                      </FormControl>
                   </Stack>
@@ -122,7 +144,15 @@ const Contacto = ({ bgColor }) => {
                         _hover={{ borderColor: "celeste" }}
                      />
                   </FormControl>
-                  <Button size='sm'>Enviar mensaje</Button>
+                  {!isSubmitted ? (
+                     <Button type='submit' size='sm'>
+                        Enviar mensaje
+                     </Button>
+                  ) : (
+                     <Text color='blanco' fontWeight='bold'>
+                        Mensaje enviado, pronto nos pondremos en contacto.
+                     </Text>
+                  )}
                </Stack>
             </SimpleGrid>
          </Stack>
