@@ -16,15 +16,29 @@ import {
 
 const Contacto = ({ bgColor }) => {
    const [isSubmitted, setIsSubmitted] = useState(false);
+   const [isError, setIsError] = useState(false);
 
-   const handleSubmit = (event) => {
+   const handleSubmit = async (event) => {
       event.preventDefault();
-      // Aquí puedes agregar lógica adicional si es necesario.
-      // Luego de enviar el formulario a través del atributo action, establecemos el estado:
-      setIsSubmitted(true);
+      const formData = new FormData(event.target);
 
-      // Simular el envío del formulario manualmente si es necesario
-      event.target.submit();
+      try {
+         const response = await fetch("https://conectar-gd.com/sendEmail.php", {
+            // Cambia a HTTPS
+            method: "POST",
+            body: formData,
+         });
+
+         const result = await response.json();
+
+         if (result.success) {
+            setIsSubmitted(true);
+         } else {
+            setIsError(true);
+         }
+      } catch (error) {
+         setIsError(true);
+      }
    };
 
    return (
@@ -42,13 +56,7 @@ const Contacto = ({ bgColor }) => {
                      Contactate y comenzá a impulsar tu crecimiento
                   </Highlight>
                </Heading>
-               <Stack
-                  as='form'
-                  gap='1rem'
-                  action='https://formsubmit.co/d9266b665bb4566e1ae1f67371c3079e'
-                  method='POST'
-                  onSubmit={handleSubmit}
-               >
+               <Stack as='form' gap='1rem' onSubmit={handleSubmit}>
                   <Stack direction='row' gap='1rem'>
                      <FormControl>
                         <FormLabel fontSize='sm' paddingLeft='0.5rem'>
@@ -117,11 +125,11 @@ const Contacto = ({ bgColor }) => {
                            borderColor='azul'
                            _hover={{ borderColor: "celeste" }}
                         >
-                           <option value='option1'>Servicios</option>
-                           <option value='option1'>Industria</option>
-                           <option value='option1'>Agroindustria</option>
-                           <option value='option2'>Tecnología</option>
-                           <option value='option3'>Otro</option>
+                           <option value='Servicios'>Servicios</option>
+                           <option value='Industria'>Industria</option>
+                           <option value='Agroindustria'>Agroindustria</option>
+                           <option value='Tecnología'>Tecnología</option>
+                           <option value='Otro'>Otro</option>
                         </Select>
                      </FormControl>
                   </Stack>
@@ -151,6 +159,12 @@ const Contacto = ({ bgColor }) => {
                   ) : (
                      <Text color='blanco' fontWeight='bold'>
                         Mensaje enviado, pronto nos pondremos en contacto.
+                     </Text>
+                  )}
+                  {isError && (
+                     <Text color='red' fontWeight='bold'>
+                        Ocurrió un error al enviar el mensaje. Por favor,
+                        intenta nuevamente.
                      </Text>
                   )}
                </Stack>
