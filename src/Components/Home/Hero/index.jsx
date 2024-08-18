@@ -6,7 +6,9 @@ import {
    Image,
    Highlight,
    useMediaQuery,
+   Link,
 } from "@chakra-ui/react";
+import { Link as ReachLink } from "react-router-dom";
 import heroImg from "/assets/images/Home/hero.png";
 
 const HeroSection = () => {
@@ -37,10 +39,14 @@ const HeroSection = () => {
                      empresarial.
                   </Text>
                   <Stack direction='row' w='100%' mt={isMobile && "1rem"}>
-                     <Button w='100%'>Contactate</Button>
-                     <Button w='100%' variant='outline'>
-                        Conocé más
-                     </Button>
+                     <Link as='a' href='#contact'>
+                        <Button>Contactate</Button>
+                     </Link>
+                     <Link as={ReachLink} to='/servicios'>
+                        <Button w='100%' variant='outline'>
+                           Conocé más
+                        </Button>
+                     </Link>
                   </Stack>
                </Stack>
             </Stack>

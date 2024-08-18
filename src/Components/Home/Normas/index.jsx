@@ -1,8 +1,17 @@
 /* eslint-disable react/prop-types */
-import { Stack, Heading, Highlight, Text, Box } from "@chakra-ui/react";
+import {
+   Stack,
+   Heading,
+   Highlight,
+   Text,
+   Box,
+   useMediaQuery,
+} from "@chakra-ui/react";
 import Marquee from "react-marquee-slider";
 
 const Normas = ({ bgColor }) => {
+   const [isMobile] = useMediaQuery("(max-width: 900px)");
+
    const normasInfo = [
       { number: "ISO 9001", title: "Calidad" },
       { number: "ISO 17025", title: "Laboratorios de Ensayo y Calibración" },
@@ -26,7 +35,7 @@ const Normas = ({ bgColor }) => {
          bgColor={bgColor ? bgColor : "inherit"}
       >
          <Stack maxW='80rem' w='100%' gap='1.5rem' paddingBlock='5rem'>
-            <Heading size='xl' lineHeight={1.1} mb='1rem'>
+            <Heading size={isMobile ? "lg" : "xl"} lineHeight={1.1} mb='1rem'>
                <Highlight query='normas' styles={{ color: "celeste" }}>
                   Algunas de las normas que implementamos.
                </Highlight>

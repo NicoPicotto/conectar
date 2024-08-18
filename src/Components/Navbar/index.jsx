@@ -34,7 +34,7 @@ const Navbar = () => {
          >
             <Stack>
                <Link as={ReachLink} to='/'>
-                  <Image w='5rem' src={logo} />
+                  <Image w={isMobile ? "2.5rem" : "5rem"} src={logo} />
                </Link>
             </Stack>
             {!isMobile && (
@@ -59,7 +59,7 @@ const Navbar = () => {
                   variant='ghost'
                   className='menu-icon'
                   as={RiMenu3Fill}
-                  fontSize='2.5rem'
+                  fontSize='1.5rem'
                   onClick={onOpen}
                   bgColor='transparent'
                   _hover={{ bgColor: "transparent" }}

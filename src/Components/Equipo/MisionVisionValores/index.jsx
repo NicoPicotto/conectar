@@ -19,7 +19,7 @@ const MisionVisionValores = () => {
             gap='1.5rem'
             paddingBlock={!isMobile && "3rem"}
          >
-            <Heading size='xl' lineHeight={1.1} mb='1rem'>
+            <Heading size={isMobile ? "lg" : "xl"} lineHeight={1.1} mb='1rem'>
                <Highlight query='nos definen' styles={{ color: "celeste" }}>
                   Los propósitos que nos definen.
                </Highlight>

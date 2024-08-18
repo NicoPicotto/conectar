@@ -18,8 +18,8 @@ const NavMobile = ({ onClose, isOpen }) => {
          <DrawerContent bgColor='negroOscuro'>
             <DrawerCloseButton
                color='blanco'
-               fontSize='1.5rem'
-               padding='2em'
+               fontSize='1rem'
+               margin="2rem"
                _focusVisible={false}
             />
             <DrawerBody

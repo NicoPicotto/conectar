@@ -60,7 +60,7 @@ const PasosExtended = () => {
    return (
       <Stack align='center' paddingInline='2rem' bgColor='negroOscuro'>
          <Stack maxW='80rem' w='100%' gap='1.5rem' paddingBlock='5rem'>
-            <Heading size='xl' lineHeight={1.1} mb='1rem'>
+            <Heading size={isMobile ? "lg" : "xl"} lineHeight={1.1} mb='1rem'>
                <Highlight query='simples pasos' styles={{ color: "celeste" }}>
                   Te acompañamos en 5 simples pasos.
                </Highlight>

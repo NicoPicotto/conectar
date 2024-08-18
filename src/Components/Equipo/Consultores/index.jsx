@@ -6,7 +6,7 @@ import {
    Highlight,
    Divider,
    Badge,
-   useMediaQuery
+   useMediaQuery,
 } from "@chakra-ui/react";
 import teamDescriptions from "./teamDescriptions";
 
@@ -17,7 +17,7 @@ const Consultores = () => {
       <Stack align='center' paddingInline='2rem' bgColor='negroOscuro'>
          <Stack maxW='80rem' w='100%' gap='1.5rem' paddingBlock='5rem'>
             {" "}
-            <Heading size='xl' lineHeight={1.1} mb='1rem'>
+            <Heading size={isMobile ? "lg" : "xl"} lineHeight={1.1} mb='1rem'>
                <Highlight query='consultores' styles={{ color: "celeste" }}>
                   Nuestro equipo de consultores estrella.
                </Highlight>
@@ -49,7 +49,7 @@ const Consultores = () => {
                         bottom={0}
                         left={0}
                         w='100%'
-                        height={isMobile ? "40%" : '30%'}
+                        height={isMobile ? "40%" : "30%"}
                         className='overlay'
                         bgGradient='linear(to-t, black, transparent)'
                      ></Stack>
@@ -123,7 +123,7 @@ const Consultores = () => {
                         bottom={0}
                         left={0}
                         w='100%'
-                        height={isMobile ? "40%" : '30%'}
+                        height={isMobile ? "40%" : "30%"}
                         className='overlay'
                         bgGradient='linear(to-t, black, transparent)'
                      ></Stack>

@@ -11,7 +11,7 @@ import {
    AccordionIcon,
    Box,
    Text,
-   useMediaQuery
+   useMediaQuery,
 } from "@chakra-ui/react";
 
 const Faq = ({ bgColor }) => {
@@ -73,7 +73,12 @@ const Faq = ({ bgColor }) => {
       >
          <Stack maxW='80rem' w='100%' gap='1.5rem' paddingBlock='5rem'>
             <SimpleGrid columns={isMobile ? 1 : 2} spacing='1rem'>
-               <Heading size='xl' lineHeight={1.3} mb='1rem' maxW='15ch'>
+               <Heading
+                  size={isMobile ? "lg" : "xl"}
+                  lineHeight={1.3}
+                  mb='1rem'
+                  maxW='15ch'
+               >
                   <Highlight query='respuestas' styles={{ color: "celeste" }}>
                      ¿Tenés preguntas? Tenemos respuestas.
                   </Highlight>

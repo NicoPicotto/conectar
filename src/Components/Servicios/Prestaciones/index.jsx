@@ -13,8 +13,13 @@ const Prestaciones = () => {
 
    return (
       <Stack align='center' paddingInline='2rem'>
-         <Stack maxW='80rem' w='100%' gap='1.5rem' paddingBlock='3rem'>
-            <Heading size='xl' lineHeight={1.1} mb='1rem'>
+         <Stack
+            maxW='80rem'
+            w='100%'
+            gap='1.5rem'
+            paddingBlock={!isMobile && "3rem"}
+         >
+            <Heading size={isMobile ? "lg" : "xl"} lineHeight={1.1} mb='1rem'>
                <Highlight
                   query='100% personalizado'
                   styles={{ color: "celeste" }}

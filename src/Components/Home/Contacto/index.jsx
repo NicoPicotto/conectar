@@ -13,7 +13,7 @@ import {
    Textarea,
    Spinner,
    Text,
-   useMediaQuery
+   useMediaQuery,
 } from "@chakra-ui/react";
 
 const Contacto = ({ bgColor }) => {
@@ -66,7 +66,12 @@ const Contacto = ({ bgColor }) => {
       >
          <Stack maxW='80rem' w='100%' gap='1.5rem' paddingBlock='5rem'>
             <SimpleGrid columns={isMobile ? 1 : 2} spacing='1rem'>
-               <Heading size='xl' lineHeight={1.1} mb='1rem' maxW='15ch'>
+               <Heading
+                  size={isMobile ? "lg" : "xl"}
+                  lineHeight={1.1}
+                  mb='1rem'
+                  maxW='15ch'
+               >
                   <Highlight query='normas' styles={{ color: "celeste" }}>
                      Contactate y comenzá a impulsar tu crecimiento
                   </Highlight>
