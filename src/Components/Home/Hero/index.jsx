@@ -5,18 +5,25 @@ import {
    Button,
    Image,
    Highlight,
+   useMediaQuery,
 } from "@chakra-ui/react";
 import heroImg from "/assets/images/Home/hero.png";
 
 const HeroSection = () => {
+   const [isMobile] = useMediaQuery("(max-width: 900px)");
+
    return (
       <Stack align='center' paddingInline='2rem' id='hero'>
          <Stack maxW='80rem' w='100%' gap='1.5rem' marginBottom='5rem'>
-            <Stack borderRadius='3rem' overflow='hidden'>
+            <Stack
+               borderRadius='3rem'
+               overflow='hidden'
+               display={isMobile && "none"}
+            >
                <Image src={heroImg} />
             </Stack>
-            <Stack direction='row' gap='1rem'>
-               <Heading size='2xl' lineHeight={1.1}>
+            <Stack direction={isMobile ? "column" : "row"} gap='1rem'>
+               <Heading size={isMobile ? "xl" : "2xl"} lineHeight={1.1}>
                   <Highlight query='sostenibles' styles={{ color: "celeste" }}>
                      Impulsamos tu crecimiento empresarial con estrategias
                      innovadoras y sostenibles.
@@ -29,7 +36,7 @@ const HeroSection = () => {
                      con las organizaciones para impulsar su crecimiento
                      empresarial.
                   </Text>
-                  <Stack direction='row' w='100%'>
+                  <Stack direction='row' w='100%' mt={isMobile && "1rem"}>
                      <Button w='100%'>Contactate</Button>
                      <Button w='100%' variant='outline'>
                         Conocé más

@@ -2,12 +2,14 @@ import {
    Stack,
    Heading,
    Highlight,
-   SimpleGrid,
+   useMediaQuery,
    StackDivider,
 } from "@chakra-ui/react";
 import PasosCardExpanded from "./PasosCardExpanded";
 
 const PasosExtended = () => {
+   const [isMobile] = useMediaQuery("(max-width: 900px)");
+
    const pasosInfo = [
       {
          text: "Diagnóstico",
@@ -64,7 +66,7 @@ const PasosExtended = () => {
                </Highlight>
             </Heading>
             <Stack
-               direction='row'
+               direction={isMobile ? "column" : "row"}
                divider={
                   <StackDivider borderColor='#3691C2' borderWidth='1px' />
                }

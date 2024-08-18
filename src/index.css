@@ -23,3 +23,7 @@ html.lenis {
 body.no-scroll {
    overflow: hidden;
 }
+
+.grecaptcha-badge {
+   visibility: hidden;
+}

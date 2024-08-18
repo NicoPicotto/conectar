@@ -1,7 +1,16 @@
-import { Stack, Heading, SimpleGrid, Highlight, Link } from "@chakra-ui/react";
+import {
+   Stack,
+   Heading,
+   SimpleGrid,
+   Highlight,
+   Link,
+   useMediaQuery,
+} from "@chakra-ui/react";
 import listaPrestaciones from "./listaPrestaciones";
 
 const Prestaciones = () => {
+   const [isMobile] = useMediaQuery("(max-width: 900px)");
+
    return (
       <Stack align='center' paddingInline='2rem'>
          <Stack maxW='80rem' w='100%' gap='1.5rem' paddingBlock='3rem'>
@@ -13,7 +22,7 @@ const Prestaciones = () => {
                   Acompañamiento 100% personalizado.
                </Highlight>
             </Heading>
-            <SimpleGrid columns={4} spacing='1rem'>
+            <SimpleGrid columns={isMobile ? 1 : 4} spacing='1rem'>
                {listaPrestaciones.map((prestacion) => (
                   <Stack
                      bgColor='negroOscuro'

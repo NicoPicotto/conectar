@@ -11,20 +11,33 @@ import {
    SimpleGrid,
    Select,
    Textarea,
+   Spinner,
    Text,
+   useMediaQuery
 } from "@chakra-ui/react";
 
 const Contacto = ({ bgColor }) => {
+   const [isMobile] = useMediaQuery("(max-width: 900px)");
+
+   const [isSubmitting, setIsSubmitting] = useState(false);
    const [isSubmitted, setIsSubmitted] = useState(false);
    const [isError, setIsError] = useState(false);
 
    const handleSubmit = async (event) => {
       event.preventDefault();
+      setIsSubmitting(true);
+
+      // Obtén el token de reCAPTCHA v3
+      const token = await window.grecaptcha.execute(
+         "6LfqXCkqAAAAAMVjCwyW68hm0qwc-rUfgvWM_iDw",
+         { action: "submit" }
+      );
+
       const formData = new FormData(event.target);
+      formData.append("g-recaptcha-response", token);
 
       try {
          const response = await fetch("https://conectar-gd.com/sendEmail.php", {
-            // Cambia a HTTPS
             method: "POST",
             body: formData,
          });
@@ -38,6 +51,8 @@ const Contacto = ({ bgColor }) => {
          }
       } catch (error) {
          setIsError(true);
+      } finally {
+         setIsSubmitting(false);
       }
    };
 
@@ -50,14 +65,14 @@ const Contacto = ({ bgColor }) => {
          bgColor={bgColor ? bgColor : "negro"}
       >
          <Stack maxW='80rem' w='100%' gap='1.5rem' paddingBlock='5rem'>
-            <SimpleGrid columns={2} spacing='1rem'>
+            <SimpleGrid columns={isMobile ? 1 : 2} spacing='1rem'>
                <Heading size='xl' lineHeight={1.1} mb='1rem' maxW='15ch'>
                   <Highlight query='normas' styles={{ color: "celeste" }}>
                      Contactate y comenzá a impulsar tu crecimiento
                   </Highlight>
                </Heading>
                <Stack as='form' gap='1rem' onSubmit={handleSubmit}>
-                  <Stack direction='row' gap='1rem'>
+                  <Stack direction={isMobile ? "column" : "row"} gap='1rem'>
                      <FormControl>
                         <FormLabel fontSize='sm' paddingLeft='0.5rem'>
                            Nombre{" "}
@@ -95,7 +110,7 @@ const Contacto = ({ bgColor }) => {
                         />
                      </FormControl>
                   </Stack>
-                  <Stack direction='row' gap='1rem'>
+                  <Stack direction={isMobile ? "column" : "row"} gap='1rem'>
                      <FormControl>
                         <FormLabel fontSize='sm' paddingLeft='0.5rem'>
                            Nombre de tu empresa
@@ -152,9 +167,21 @@ const Contacto = ({ bgColor }) => {
                         _hover={{ borderColor: "celeste" }}
                      />
                   </FormControl>
+
                   {!isSubmitted ? (
-                     <Button type='submit' size='sm'>
-                        Enviar mensaje
+                     <Button
+                        className='g-recaptcha'
+                        data-sitekey='6LfqXCkqAAAAAMVjCwyW68hm0qwc-rUfgvWM_iDw'
+                        data-action='submit'
+                        type='submit'
+                        size='sm'
+                        disabled={isSubmitting}
+                     >
+                        {isSubmitting ? (
+                           <Spinner size='sm' />
+                        ) : (
+                           "Enviar mensaje"
+                        )}
                      </Button>
                   ) : (
                      <Text color='blanco' fontWeight='bold'>

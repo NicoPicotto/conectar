@@ -13,6 +13,8 @@
          href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Unbounded:wght@200..900&display=swap"
          rel="stylesheet"
       />
+      <script src="https://www.google.com/recaptcha/api.js?render=6LfqXCkqAAAAAMVjCwyW68hm0qwc-rUfgvWM_iDw"></script>
+
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Conectar | Consultoría Empresarial</title>
    </head>
@@ -20,62 +22,5 @@
       <div id="root"></div>
       <script type="module" src="/src/main.jsx"></script>
       <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.23/bundled/lenis.min.js"></script>
-      <!-- <script>
-         // LENIS SMOOTH SCROLL
-         let lenis;
-
-         lenis = new Lenis({
-            lerp: 0.1,
-            wheelMultiplier: 0.7,
-            gestureOrientation: "vertical",
-            normalizeWheel: false,
-            smoothTouch: false,
-         });
-         function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-         }
-         requestAnimationFrame(raf);
-
-         //Esto lo agregue yo
-         document.querySelectorAll("[href^='#']").forEach((anchor) => {
-            const target = document.querySelector(anchor.getAttribute("href"));
-
-            anchor.addEventListener("click", (e) => {
-               e.preventDefault();
-               console.log(target);
-               lenis.scrollTo(target, { offset: -80 });
-            });
-         });
-
-         document
-            .querySelectorAll("[data-lenis-start]")
-            .forEach(function (element) {
-               element.addEventListener("click", function () {
-                  lenis.start();
-               });
-            });
-
-         document
-            .querySelectorAll("[data-lenis-stop]")
-            .forEach(function (element) {
-               element.addEventListener("click", function () {
-                  lenis.stop();
-               });
-            });
-
-         document
-            .querySelectorAll("[data-lenis-toggle]")
-            .forEach(function (element) {
-               element.addEventListener("click", function () {
-                  this.classList.toggle("stop-scroll");
-                  if (this.classList.contains("stop-scroll")) {
-                     lenis.stop();
-                  } else {
-                     lenis.start();
-                  }
-               });
-            });
-      </script> -->
    </body>
 </html>

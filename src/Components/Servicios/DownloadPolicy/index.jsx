@@ -1,7 +1,9 @@
-import { Stack, Heading, Icon } from "@chakra-ui/react";
+import { Stack, Heading, Icon, useMediaQuery } from "@chakra-ui/react";
 import { MdDownloadForOffline } from "react-icons/md";
 
 const DownloadPolicy = () => {
+   const [isMobile] = useMediaQuery("(max-width: 900px)");
+
    return (
       <Stack align='center' paddingInline='2rem' bgColor='negroOscuro'>
          <Stack
@@ -21,16 +23,19 @@ const DownloadPolicy = () => {
                href='/assets/politica/PGS-01-00_PolíticaDeGestiónSostenible.pdf'
                size='lg'
                lineHeight={1.1}
+               textAlign='center'
                textDecorationColor='celeste'
                _hover={{ textDecoration: "underline" }}
             >
                Descargá nuestra Política de Calidad
             </Heading>
-            <Icon
-               as={MdDownloadForOffline}
-               color='celeste'
-               fontSize='xx-large'
-            />
+            {!isMobile && (
+               <Icon
+                  as={MdDownloadForOffline}
+                  color='celeste'
+                  fontSize='xx-large'
+               />
+            )}
          </Stack>
       </Stack>
    );

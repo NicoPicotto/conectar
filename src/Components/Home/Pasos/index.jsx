@@ -1,7 +1,9 @@
-import { Stack, Heading, Highlight, SimpleGrid } from "@chakra-ui/react";
+import { Stack, Heading, Highlight, SimpleGrid, useMediaQuery } from "@chakra-ui/react";
 import PasosCard from "./PasosCard";
 
 const PasosSection = () => {
+   const [isMobile] = useMediaQuery("(max-width: 900px)");
+
    const pasosInfo = [
       { text: "Diagnóstico", icon: "/assets/images/Home/diagnostico.svg" },
       { text: "Preparacion", icon: "/assets/images/Home/preparacion.svg" },
@@ -21,7 +23,7 @@ const PasosSection = () => {
                   Te acompañamos en 5 simples pasos.
                </Highlight>
             </Heading>
-            <SimpleGrid columns={5} spacing='1rem'>
+            <SimpleGrid columns={isMobile ? 1 : 5} spacing='1rem'>
                {pasosInfo.map((paso) => (
                   <PasosCard
                      key={paso.text}

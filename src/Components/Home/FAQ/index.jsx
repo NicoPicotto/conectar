@@ -11,9 +11,12 @@ import {
    AccordionIcon,
    Box,
    Text,
+   useMediaQuery
 } from "@chakra-ui/react";
 
 const Faq = ({ bgColor }) => {
+   const [isMobile] = useMediaQuery("(max-width: 900px)");
+
    const faqInfo = [
       {
          question: "¿En qué áreas de negocio puedo solicitar asesoramiento?",
@@ -69,7 +72,7 @@ const Faq = ({ bgColor }) => {
          id='faq'
       >
          <Stack maxW='80rem' w='100%' gap='1.5rem' paddingBlock='5rem'>
-            <SimpleGrid columns={2} spacing='1rem'>
+            <SimpleGrid columns={isMobile ? 1 : 2} spacing='1rem'>
                <Heading size='xl' lineHeight={1.3} mb='1rem' maxW='15ch'>
                   <Highlight query='respuestas' styles={{ color: "celeste" }}>
                      ¿Tenés preguntas? Tenemos respuestas.
