@@ -3,7 +3,7 @@ const listaPrestaciones = [
       title: "Consultoría para la Implementación de Normas y/o Sistemas.",
    },
    {
-      title: "Gestión de Procesos",
+      title: "Gestión de Procesos.",
    },
    {
       title: "Asesoría en la Ejecución de Proyectos.",
