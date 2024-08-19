@@ -19,7 +19,7 @@ const Consultores = () => {
             {" "}
             <Heading size={isMobile ? "lg" : "xl"} lineHeight={1.1} mb='1rem'>
                <Highlight query='consultores' styles={{ color: "celeste" }}>
-                  Nuestro equipo de consultores estrella.
+                  Nuestro equipo de consultores.
                </Highlight>
             </Heading>
             <SimpleGrid columns={isMobile ? 1 : 2} spacing='2rem'>

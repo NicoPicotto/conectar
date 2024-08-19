@@ -21,7 +21,7 @@ const PasosExtended = () => {
          ],
       },
       {
-         text: "Preparacion",
+         text: "Preparación",
          icon: "/assets/images/Home/preparacion.svg",
          points: [
             "Relevamiento de los procesos de dirección, operativos y de apoyo.",

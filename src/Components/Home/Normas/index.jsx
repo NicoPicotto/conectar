@@ -15,7 +15,7 @@ const Normas = ({ bgColor }) => {
    const normasInfo = [
       { number: "ISO 9001", title: "Calidad" },
       { number: "ISO 17025", title: "Laboratorios de Ensayo y Calibración" },
-      { number: "ISO 22001", title: "Inocuidad Alimentaria" },
+      { number: "ISO 22000", title: "Inocuidad Alimentaria" },
       { number: "ISO 27001", title: "Seguridad de la Información" },
       { number: "ISO 14001", title: "Medio Ambiente" },
       { number: "ISO 26000", title: "Responsabilidad Social" },

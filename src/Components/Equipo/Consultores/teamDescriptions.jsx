@@ -17,7 +17,7 @@ const teamDescriptions = [
    },
    {
       name: "María Belén Pierantonelli",
-      position: "Consultoa",
+      position: "Consultora",
       image: "/assets/images/Team/belen.png",
       title: "Microbióloga",
       description:
@@ -28,9 +28,8 @@ const teamDescriptions = [
       position: "Consultor",
       image: "/assets/images/Team/matias.png",
       title: "Licenciado en Bromatología",
-      description: `Especialista en Integración de Sistemas de Gestión, con extensa Formación en Materia Ambiental y Desarrollo Sostenible. 
-Auditor de Sistemas de Gestión de Calidad y Seguridad Alimentaria. Amplio expertise en la industria manisera.
-`,
+      description: `Especialista en integración de sistemas de gestión, con extensa formación en materia ambiental y desarrollo sostenible. 
+Auditor de sistemas de gestión de calidad y seguridad alimentaria. Amplio expertise en la industria manisera.`,
    },
    {
       name: "Luis Cerutti",

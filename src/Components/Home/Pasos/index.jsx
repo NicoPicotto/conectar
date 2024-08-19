@@ -12,7 +12,7 @@ const PasosSection = () => {
 
    const pasosInfo = [
       { text: "Diagnóstico", icon: "/assets/images/Home/diagnostico.svg" },
-      { text: "Preparacion", icon: "/assets/images/Home/preparacion.svg" },
+      { text: "Preparación", icon: "/assets/images/Home/preparacion.svg" },
       {
          text: "Implementación",
          icon: "/assets/images/Home/implementacion.svg",

@@ -54,7 +54,7 @@ const Footer = () => {
                               alignItems='center'
                            >
                               <Icon mr={2} fontSize='md' as={IoLogoWhatsapp} />
-                              358-12345678
+                              358-4355413
                            </Text>
                            <Text fontSize='sm'>|</Text>
                            <Text
