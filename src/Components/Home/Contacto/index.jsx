@@ -180,6 +180,7 @@ const Contacto = ({ bgColor }) => {
                         data-action='submit'
                         type='submit'
                         size='sm'
+                        aria-label="Enviar mensaje"
                         disabled={isSubmitting}
                      >
                         {isSubmitting ? (

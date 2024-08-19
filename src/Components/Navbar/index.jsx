@@ -34,22 +34,43 @@ const Navbar = () => {
          >
             <Stack>
                <Link as={ReachLink} to='/'>
-                  <Image w={isMobile ? "2.5rem" : "5rem"} src={logo} />
+                  <Image
+                     w={isMobile ? "2.5rem" : "5rem"}
+                     src={logo}
+                     alt='Logo de Conectar'
+                  />
                </Link>
             </Stack>
             {!isMobile && (
                <Stack direction='row' gap='3rem' align='center'>
                   <Link as={ReachLink} to='/nosotros'>
-                     <Button variant='link'>Nosotros</Button>
+                     <Button
+                        variant='link'
+                        aria-label='Ir a la sección Nosotros'
+                     >
+                        Nosotros
+                     </Button>
                   </Link>
                   <Link as={ReachLink} to='/servicios'>
-                     <Button variant='link'>Servicios</Button>
+                     <Button
+                        aria-label='Ir a la sección Servicios'
+                        variant='link'
+                     >
+                        Servicios
+                     </Button>
                   </Link>
                   <Link as={ReachLink} to='/faq'>
-                     <Button variant='link'>Preguntas Frecuentes</Button>
+                     <Button
+                        aria-label='Ir a la sección Preguntas Frecuentes'
+                        variant='link'
+                     >
+                        Preguntas Frecuentes
+                     </Button>
                   </Link>
                   <Link as='a' href='#contact'>
-                     <Button>Contactate</Button>
+                     <Button aria-label='Ir a la sección Contactarse'>
+                        Contactate
+                     </Button>
                   </Link>
                </Stack>
             )}

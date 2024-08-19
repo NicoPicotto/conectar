@@ -16,7 +16,7 @@ const PasosCardExpanded = ({ icon, text, points }) => {
          p='1rem'
       >
          <Stack direction='row' align='start' mb='1rem'>
-            <Image src={icon} h='1.5rem' />
+            <Image src={icon} h='1.5rem' alt={`Imagen de ${text}`} />
             <Heading fontWeight='regular' size='md'>
                {text}
             </Heading>

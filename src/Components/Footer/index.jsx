@@ -30,7 +30,12 @@ const Footer = () => {
                >
                   <Stack>
                      <Link as={ReachLink} to='/'>
-                        <Image w='10rem' src={logo} mb='3rem' />
+                        <Image
+                           w='10rem'
+                           src={logo}
+                           mb='3rem'
+                           alt='Logo de Conectar'
+                        />
                      </Link>
                      <Stack>
                         <Text
@@ -85,22 +90,27 @@ const Footer = () => {
                   {!isMobile && (
                      <Stack gap='1rem' justify='flex-end' align='flex-end'>
                         <Link as={ReachLink} to='/nosotros'>
-                           <Button variant='link' size='sm' fontFamily='body'>
+                           <Button
+                              variant='link'
+                              size='sm'
+                              fontFamily='body'
+                              aria-label='Ir a la sección de Nosotros'
+                           >
                               Nosotros
                            </Button>
                         </Link>
                         <Link as={ReachLink} to='/servicios'>
-                           <Button variant='link' size='sm' fontFamily='body'>
+                           <Button variant='link' size='sm' fontFamily='body' aria-label="Ir a la sección de Servicios">
                               Servicios
                            </Button>
                         </Link>
                         <Link as={ReachLink} to='/faq'>
-                           <Button variant='link' size='sm' fontFamily='body'>
+                           <Button variant='link' size='sm' fontFamily='body' aria-label="Ir a la sección de Preguntas Frecuentes">
                               Preguntas Frecuentes
                            </Button>
                         </Link>
                         <Link as='a' href='#contact'>
-                           <Button variant='link' size='sm' fontFamily='body'>
+                           <Button variant='link' size='sm' fontFamily='body' aria-label="Ir a la sección de Contactarse">
                               Contactarse
                            </Button>
                         </Link>

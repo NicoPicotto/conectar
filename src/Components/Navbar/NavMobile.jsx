@@ -20,6 +20,7 @@ const NavMobile = ({ onClose, isOpen }) => {
                color='blanco'
                fontSize='1rem'
                margin="2rem"
+               aria-label="Cerrar navegación"
                _focusVisible={false}
             />
             <DrawerBody
@@ -35,6 +36,7 @@ const NavMobile = ({ onClose, isOpen }) => {
                      textDecor='underline'
                      variant='link'
                      fontSize='xl'
+                     aria-label="Ir a la sección Inicio"
                      textUnderlineOffset={4}
                      textDecorationColor='azul'
                   >
@@ -46,6 +48,7 @@ const NavMobile = ({ onClose, isOpen }) => {
                      textDecor='underline'
                      variant='link'
                      fontSize='xl'
+                     aria-label="Ir a la sección Nosotros"
                      textUnderlineOffset={4}
                      textDecorationColor='azul'
                   >
@@ -57,6 +60,7 @@ const NavMobile = ({ onClose, isOpen }) => {
                      textDecor='underline'
                      variant='link'
                      fontSize='xl'
+                     aria-label="Ir a la sección Servicios"
                      textUnderlineOffset={4}
                      textDecorationColor='azul'
                   >
@@ -69,6 +73,7 @@ const NavMobile = ({ onClose, isOpen }) => {
                      textDecor='underline'
                      variant='link'
                      fontSize='xl'
+                     aria-label="Ir a la sección Preguntas Frecuentes"
                      textUnderlineOffset={4}
                      textDecorationColor='azul'
                   >
@@ -81,6 +86,7 @@ const NavMobile = ({ onClose, isOpen }) => {
                      textDecor='underline'
                      variant='link'
                      fontSize='xl'
+                     aria-label="Ir a la sección Contactarse"
                      textUnderlineOffset={4}
                      textDecorationColor='azul'
                   >

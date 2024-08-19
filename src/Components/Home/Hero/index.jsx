@@ -9,7 +9,7 @@ import {
    Link,
 } from "@chakra-ui/react";
 import { Link as ReachLink } from "react-router-dom";
-import heroImg from "/assets/images/Home/hero.png";
+import heroImg from "/assets/images/Home/hero.webp";
 
 const HeroSection = () => {
    const [isMobile] = useMediaQuery("(max-width: 900px)");
@@ -22,7 +22,10 @@ const HeroSection = () => {
                overflow='hidden'
                display={isMobile && "none"}
             >
-               <Image src={heroImg} />
+               <Image
+                  src={heroImg}
+                  alt='Imagen de portada haciendo referencia a acompañamiento empresarial'
+               />
             </Stack>
             <Stack direction={isMobile ? "column" : "row"} gap='1rem'>
                <Heading size={isMobile ? "xl" : "2xl"} lineHeight={1.1}>
@@ -40,10 +43,14 @@ const HeroSection = () => {
                   </Text>
                   <Stack direction='row' w='100%' mt={isMobile && "1rem"}>
                      <Link as='a' href='#contact'>
-                        <Button>Contactate</Button>
+                        <Button aria-label='Contactarse'>Contactate</Button>
                      </Link>
                      <Link as={ReachLink} to='/servicios'>
-                        <Button w='100%' variant='outline'>
+                        <Button
+                           w='100%'
+                           variant='outline'
+                           aria-label='Conocer más'
+                        >
                            Conocé más
                         </Button>
                      </Link>

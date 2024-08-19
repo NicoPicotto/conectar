@@ -17,6 +17,7 @@ const DownloadPolicy = () => {
                <Button
                   as='a'
                   download
+                  aria-label="Descargar nuestra Política de Calidad"
                   href='/assets/politica/PGS-01-00_PolíticaDeGestiónSostenible.pdf'
                   size='sm'
                >

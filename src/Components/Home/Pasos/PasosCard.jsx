@@ -16,7 +16,7 @@ const PasosCard = ({ icon, text }) => {
          _hover={{ filter: "brightness(1.2)" }}
       >
          <Stack align='start'>
-            <Image src={icon} h='2rem' />
+            <Image src={icon} h='2rem' alt={`Imagen de ${text}`} />
          </Stack>
          <Stack>
             {" "}

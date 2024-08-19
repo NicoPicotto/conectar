@@ -87,6 +87,7 @@ const Faq = ({ bgColor }) => {
                   {faqInfo.map((faq) => (
                      <AccordionItem borderColor='azul' key={faq.question}>
                         <AccordionButton
+                           aria-label='Abrir respuesta'
                            _expanded={{ bg: "azul", color: "blanco" }}
                         >
                            <Box as='span' flex='1' textAlign='left'>
