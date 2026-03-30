@@ -97,7 +97,7 @@ const Consultores = () => {
                ))}
             </SimpleGrid>
             <SimpleGrid columns={isMobile ? 1 : 3} spacing='2rem'>
-               {teamDescriptions.slice(2, 5).map((team) => (
+               {teamDescriptions.slice(2).map((team) => (
                   <Stack
                      key={team.name}
                      borderRadius={10}
