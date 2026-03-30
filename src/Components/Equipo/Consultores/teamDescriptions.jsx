@@ -39,6 +39,14 @@ Auditor de sistemas de gestión de calidad y seguridad alimentaria. Amplio exper
       description:
          "Con 15 años de experiencia en IT y ciberseguridad. Especialista en implementación de normas de gestión de la seguridad de la información.",
    },
+   {
+      name: "Cecilia Isabel Magnano",
+      position: "Consultora",
+      image: "/assets/images/Team/cecilia.png",
+      title: "Ingeniera en Tecnología de Alimentos",
+      description:
+         "Especialista en Seguridad Alimentaria. 15 años de experiencia en desarrollo e implementación de Normas de Calidad y Seguridad alimentaria",
+   },
 ];
 
 export default teamDescriptions;
