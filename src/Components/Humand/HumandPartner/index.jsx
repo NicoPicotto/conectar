@@ -72,12 +72,15 @@ const HumandPartner = () => {
                {reasons.map((reason) => (
                   <Stack
                      key={reason.title}
-                     bgColor='negroOscuro'
+                     bgColor='grisOscuro'
                      borderRadius={10}
                      p='1.75rem'
                      gap='0.75rem'
-                     borderTopWidth={3}
-                     borderTopColor='azul'
+                     borderTopWidth={6}
+                     borderColor='azul'
+                     borderRightWidth={1}
+                     borderLeftWidth={1}
+                     borderBottomWidth={1}
                   >
                      <Icon
                         as={reason.icon}
