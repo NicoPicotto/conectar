@@ -81,6 +81,19 @@ const NavMobile = ({ onClose, isOpen }) => {
                   </Button>
                </Link>
 
+               <Link as={ReachLink} to='/humand' onClick={onClose}>
+                  <Button
+                     textDecor='underline'
+                     variant='link'
+                     fontSize='xl'
+                     aria-label="Ir a la página de Humand"
+                     textUnderlineOffset={4}
+                     textDecorationColor='azul'
+                  >
+                     Humand
+                  </Button>
+               </Link>
+
                <Link as='a' href='#contact' onClick={onClose}>
                   <Button
                      textDecor='underline'

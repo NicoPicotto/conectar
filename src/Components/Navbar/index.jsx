@@ -67,6 +67,14 @@ const Navbar = () => {
                         Preguntas Frecuentes
                      </Button>
                   </Link>
+                  <Link as={ReachLink} to='/humand'>
+                     <Button
+                        aria-label='Ir a la página de Humand'
+                        variant='link'
+                     >
+                        Humand
+                     </Button>
+                  </Link>
                   <Link as='a' href='#contact'>
                      <Button aria-label='Ir a la sección Contactarse'>
                         Contactate

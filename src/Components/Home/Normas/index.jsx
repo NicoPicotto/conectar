@@ -5,6 +5,9 @@ import {
    Highlight,
    Text,
    Box,
+   Button,
+   Link,
+   Divider,
    useMediaQuery,
 } from "@chakra-ui/react";
 import Marquee from "react-marquee-slider";
@@ -25,6 +28,8 @@ const Normas = ({ bgColor }) => {
          title: "Análisis de Peligros y Puntos Críticos de Control",
       },
       { number: "EMPRESA B", title: "Triple Impacto" },
+      { number: "BRCGS", title: "Seguridad Alimentaria" },
+      { number: "BRCGS", title: "Agentes & Corredores" }
    ];
 
    return (
@@ -97,6 +102,83 @@ const Normas = ({ bgColor }) => {
                      </Stack>
                   ))}
                </Marquee>
+            </Stack>
+
+            <Divider borderColor='azul' opacity={0.4} mt='2rem' />
+
+            <Stack
+               direction={isMobile ? "column" : "row"}
+               gap='2rem'
+               align='flex-start'
+               mt='2rem'
+            >
+               <Stack flex={1} gap='1rem'>
+                  <Stack gap='0.5rem'>
+                     <Heading size={isMobile ? "md" : "lg"} lineHeight={1.1}>
+                        <Highlight
+                           query='Certificación'
+                           styles={{ color: "celeste" }}
+                        >
+                           Mi Primera Certificación
+                        </Highlight>
+                     </Heading>
+                     <Text color="gray" fontStyle='italic'>
+                        Te acompañamos a acceder al programa y aprovechar sus
+                        beneficios.
+                     </Text>
+                  </Stack>
+                  <Text lineHeight={1.6} style={{ textWrap: "pretty" }}>
+                     El programa{" "}
+                     <Box as='span' color='celeste' fontWeight='bold'>
+                        &ldquo;Mi Primera Certificación&rdquo;
+                     </Box>
+                     , impulsado por el Gobierno de la Provincia de Córdoba,
+                     está diseñado para apoyar a empresas que buscan implementar
+                     y certificar por primera vez normas de gestión, mediante
+                     asistencia técnica y beneficios económicos.
+                  </Text>
+                  <Text lineHeight={1.6} style={{ textWrap: "pretty" }}>
+                     En{" "}
+                     <Box as='span' color='celeste' fontWeight='bold'>
+                        CONECTAR
+                     </Box>
+                     , acompañamos a las organizaciones en todo el proceso para
+                     que puedan acceder al programa de forma ágil y aprovechar
+                     al máximo sus ventajas.
+                  </Text>
+                  <Link as='a' href='#contact' mt='0.5rem'>
+                     <Button size="sm" aria-label='Consultar sobre Mi Primera Certificación'>
+                        Quiero saber más
+                     </Button>
+                  </Link>
+               </Stack>
+
+               <Stack
+                  borderWidth={2}
+                  borderColor='azul'
+                  borderRadius='1.25rem'
+                  overflow='hidden'
+                  minW={isMobile ? "100%" : "22rem"}
+                  maxW={isMobile ? "100%" : "22rem"}
+                  gap={0}
+               >
+                  <Stack bgColor='azul' px='1.25rem' py='0.75rem'>
+                     <Heading size='sm' color='blanco'>
+                        Beneficio clave
+                     </Heading>
+                  </Stack>
+                  <Stack px='1.25rem' py='1rem'>
+                     <Text lineHeight={1.6} style={{ textWrap: "pretty" }}>
+                        Este programa permite{" "}
+                        <Box as='span' color='celeste' fontWeight='bold'>
+                           reducir significativamente los costos de
+                           certificación
+                        </Box>
+                        , facilitando que más empresas puedan dar este paso
+                        estratégico.
+                     </Text>
+                  </Stack>
+               </Stack>
             </Stack>
          </Stack>
       </Stack>
