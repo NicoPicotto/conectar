@@ -19,7 +19,7 @@ const reasons = [
    {
       icon: RiShieldCheckLine,
       title: "Referral Partner Oficial",
-      desc: "Contamos con la autorización de Humand para ofrecer, implementar y acompañar la adopción de la plataforma en tu organización.",
+      desc: "A través de nuestra alianza con Humand, acercamos la plataforma a las organizaciones y acompañamos su implementación y adopción, brindando asesoramiento durante todo el proceso.",
    },
    {
       icon: RiOrganizationChart,
